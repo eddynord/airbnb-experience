@@ -107,6 +107,10 @@ body {
   font-size: 12px;
 }
 
+.card-flex {
+  display: flex;
+}
+
   
   
   

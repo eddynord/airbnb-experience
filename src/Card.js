@@ -1,5 +1,7 @@
 import React from 'react';
-import CardOne from './img/card_one.png'
+// import CardOne from './img/card_one.png'
+// import CardTwo from './img/card_two.png'
+// import CardThree from './img/card_three.png'
 import StarIcon from './img/star.png'
 
 
@@ -7,25 +9,24 @@ import StarIcon from './img/star.png'
 
 
 export default Card 
-function Card() {
+function Card(props) {
     return(
         <section className='card-section'>
             <div className='card-content'>
                 <div className='card_one'>
-                    <img src={CardOne} alt='Katie Zafares'/>
+                    <img src={props.image} alt='Katie Zafares'/>
                     <div className='card-info'>
                         <img src={StarIcon} alt='Star'/>
-                        <small>5.0 (6) · USA</small>
+                        <small>{props.rating} ({props.reviewCount}) · {props.location}</small>
                     </div>
 
                     <div className='card-one-title'>
-                        <p>Life lessons with Katie Zaferes</p>
-                        <p><strong>From $136 </strong>/person</p>
+                        <p>{props.title}</p>
+                        <p><strong>From ${props.price}</strong>/person</p>
                     </div>
                 </div>
                    
             </div>
         </section>
-
     )
 }
