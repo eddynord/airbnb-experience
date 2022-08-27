@@ -8,16 +8,28 @@ import StarIcon from './img/star.png'
 
 
 
+
 export default Card 
 function Card(props) {
+    let badgeText
+    if(props.openSpots === 0) {
+        badgeText = "SOLD OUT"
+    } else if (props.location === 'Online') {
+        badgeText = "ONLINE"
+    }
+
+
+
     return(
         <section className='card-section'>
             <div className='card-content'>
                 <div className='card_one'>
-                    <img src={props.image} alt='Katie Zafares'/>
+                    {badgeText && <div className='card-badge'>{badgeText}</div>}
+                    
+                    <img src={props.coverImg} alt='Katie Zafares'/>
                     <div className='card-info'>
                         <img src={StarIcon} alt='Star'/>
-                        <small>{props.rating} ({props.reviewCount}) · {props.location}</small>
+                        <small>{props.stats.rating} ({props.stats.reviewCount}) · {props.location}</small>
                     </div>
 
                     <div className='card-one-title'>

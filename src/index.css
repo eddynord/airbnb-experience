@@ -7,7 +7,7 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background-color: bisque;
+  /* background-color: bisque; */
 }
 
 
@@ -87,6 +87,7 @@ body {
 .card_one {
   line-height:0.8;
   padding-left: 36px;
+  position: relative;
 }
 
 .card-info {
@@ -109,6 +110,16 @@ body {
 
 .card-flex {
   display: flex;
+}
+
+.card-badge {
+  position: absolute;
+  top: 6px;
+  left: 45px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
+  font-weight: bold;
 }
 
   
