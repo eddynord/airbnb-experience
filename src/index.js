@@ -10,13 +10,19 @@ import Data from './Data';
 
 function Container(props) {
   const cardData = Data.map(items => {
-    return <Card   
-                  image = {items.coverImg}
-                  title = {items.title}
-                  price = {items.price}
-                  location = {items.location}
-                  rating = {items.stats.rating}
-                  reviewCount = {items.stats.reviewCount}
+    return <Card  
+
+
+                  key = {items.id}
+                  {...items} // SAME AS PASSING .items to the props or use items={items}
+                  //
+                  // image = {items.coverImg}
+                  // title = {items.title}
+                  // price = {items.price}
+                  // location = {items.location}
+                  // rating = {items.stats.rating}
+                  // reviewCount = {items.stats.reviewCount}
+                  // openSpots = {items.openSpots}
             />
                   
     })
